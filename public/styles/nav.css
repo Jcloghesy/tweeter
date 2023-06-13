@@ -1,3 +1,4 @@
+/* -------------------------  Entire Navigation Bar      --------------------------------------- */
 /* Entire Nav Bar Area */
   nav {
     background-color: #4056A1;
@@ -17,8 +18,34 @@
     position: fixed; /*fixes nav bar*/
   }
 
+/* left Area around 'Tweeter' logo */
+  div.navLeft-TweeterLogo {
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+    font-size: 2.0rem;
+    font-family: 'Bungee', sans-serif;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#logo {
+/* Right Area around 'Write a new tweet' */
+  div.navRight-WriteTweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* -------------------------    Tweeter Logo         ------------------------------------------- */
+/* 'Tweeter' logo */
+#logoTweeter {
+  color: #FFFFFF;
+  margin: 1.5em;
   font-family: 'Bungee', sans-serif;
 }
