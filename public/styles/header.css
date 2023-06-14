@@ -30,3 +30,9 @@ body > header {
       position: fixed;
     }
 }
+
+/* --------------------------   Elements within Header   --------------------------------------- */
+/* User - Avatar / Image */
+  body > header img {
+    margin: 5px;
+  }
