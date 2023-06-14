@@ -27,6 +27,15 @@
 /* ----------------------------------    MAIN   ---------------------------------------------- */
   /* ----  Additional CSS can be defined below or in other CSS files, as per instructions ------ */
 
+  main {
+    background-color: inherit;  /* alt color #f4f1ec*/
+    height: 100%;
+    width: 90%;
+    margin: 0px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   
 /* ============================================================================================= */
 
