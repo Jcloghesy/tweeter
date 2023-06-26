@@ -3,6 +3,15 @@
 /* ============================================================================================= */
 
 
+/**
+ *  
+ * Document Ready Function - ensures HTML elements are loaded prior to accessing
+ *                         - ensures browser loads these HTML elements
+ */
+$(document).ready(function () {
+});
+
+
 
 
 
