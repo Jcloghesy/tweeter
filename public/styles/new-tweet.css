@@ -6,11 +6,57 @@
 /* ============================================================================================= */
 /* ========================  Main Styling Elements  ======================== */
 
+/* 1. styles for the whole new tweet sections */
+section.new-tweet {
+  width: 100%;
+  margin-top: 50px;
+  display: none;
+}
+
+/* 2. container that holds the form */
+.new-tweet p {
+  padding: 15px;
+  background-color: #F36060;
+  color: #FFFFFF;
+  border-radius: 25px;
+  display: none;
+  text-align: center;
+  margin-top: 0px;
+}
+
+/* 3. tweet text input area */        
+textarea {
+  background-color:  #f4f1ec;
+  width: 100%;
+  resize: none;
+  border-style: none;
+  border-bottom-style: solid;
+  border-width: thick;
+  outline: none;
+  color: #545149;
+}
+
 
 
 /* ============================================================================================= */
 /* ========================  Other Page Elements  ========================== */
 
+/* Tweet Button */
+input {
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+/* Character Counter */
+span.counter {
+  font-family: 'Bungee', sans-serif;
+  color: white;
+  border-top: 10px;
+  float: right;
+}
 
 
+/* ============================================================================================= */
 /* ============================================================================================= */
