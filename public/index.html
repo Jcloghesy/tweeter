@@ -33,6 +33,9 @@
       <!-- App JS -->
         <script type="text/javascript" src="/scripts/client.js"></script>
     
+      <!-- Character Counter JS -->
+        <script src="/scripts/composer-char-counter.js"></script> 
+          
       <!-- Disabling Viewport Zooming -->
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     </head>
@@ -52,18 +55,20 @@
           </div>
         </nav>
 
-<!-- --- NEW TWEET FORM (Container, Input Box, POST, char counter) --------- -->
-    <!-- Page-specific (main) content here -->
+      <!--  USER AVATAR (Image, Name title/subtitle)                         -->
+        <header>
 <!--  NEW TWEET FORM (Section (with h2), Form, Text Area, Button, Counter)  -->
       <!-- Page-specific (main) content here -->   
         <main class="container">
-        <!-- Form Container     -->  
+        <!-- Form Container (Section, Action+Method, Tex tArea, Sub Button) -->  
           <section class="new-tweet">
             <p></p>
-          <!-- Text Area / Form Input text box   -->          
             <form action="/tweets/" method="POST">
+            <!-- Text Area / Form Input text box   -->          
               <textarea name="text" placeholder="What are you humming about?"></textarea>
               <input type="submit" value="Tweet">
+            <!-- Character Counter  -->
+              <span class="counter">140</span> 
             </form>
           </section>
         </main> 
