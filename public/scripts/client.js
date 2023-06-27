@@ -103,11 +103,15 @@
 /* ==========   EVENT HANDLERS (Compose-new, submit new)      ============== */
 
   /** Event Listener to Prevent Default Behavior Submit  */
+   *  J/Query POST event handler that serialized form data & submits
+  */
   $('.new-tweet form').submit( function (event) {
     event.preventDefault();
     const $form = $(this);
-  })
+    const tweet = $form.serialize()
+    $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
   });
+  
 
   
 /* ============================================================================================= */
