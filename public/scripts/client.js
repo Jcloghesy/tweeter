@@ -58,6 +58,22 @@
     ]
 
 
+/* ==========   OTHER FUNCTIONS (Load Tweets, )               ============== */
+
+/**  Function - load Tweets   */
+    /**
+     * Makes a GET request to specified URL to access the tweet database
+     * Runs returned tweet array through enderTweets function
+     * After tweet loaded, processed, renders the tweets on success.
+     */
+    const loadTweets = function() {
+      $.ajax('/tweets/', { method: 'GET' })
+        .then(function(allTweets) {
+          renderTweets(allTweets);
+        });
+    };
+
+    loadTweets();
 
   /**  Function - createTweetElement                                                     */ 
    /** 
