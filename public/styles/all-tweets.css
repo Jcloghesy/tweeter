@@ -20,6 +20,10 @@
     padding: 20px;
   }
 
+/* Article.Tweet - Boarder - Hover                       */
+  article.tweet:hover {
+    box-shadow: 5px 5px 0 #858383;
+  }
 
 /* Article.Tweet - Span                                  */
   article.tweet span {
@@ -36,6 +40,10 @@
     margin-bottom: 15px;
   }
 
+/* Header Area - hover                                   */
+  article.tweet:hover header {
+    font-weight: 600;
+  }
 
 /* Header Area Image                                     */
   article.tweet header img {
@@ -65,15 +73,27 @@
     margin-top: 5px;
   }
 
-/* =============================   Header   ================================= */
+/* Footer Area - hover                                   */
+  article.tweet:hover footer {
+    font-weight: 600;
+  }
+
 /* Footer Area Span                                      */
   article.tweet footer span {
     font-size: 15px;
   }
 
+#icon1:hover{
+  color: #dede21;
+}
 
-/* =============================   Footer   ================================= */
+#icon2:hover{
+  color: #dede21;
+}
 
+#icon3:hover{
+  color: #dede21;
+}
 
 /* =============================   Other    ================================= */
 
