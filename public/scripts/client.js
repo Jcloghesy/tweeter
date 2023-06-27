@@ -100,5 +100,15 @@
       }
     };
 
+/* ==========   EVENT HANDLERS (Compose-new, submit new)      ============== */
+
+  /** Event Listener to Prevent Default Behavior Submit  */
+  $('.new-tweet form').submit( function (event) {
+    event.preventDefault();
+    const $form = $(this);
+  })
+  });
+
+  
 /* ============================================================================================= */
 /* ============================================================================================= */
