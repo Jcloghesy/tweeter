@@ -20,8 +20,22 @@
     };
 
 /* ==========   OTHER FUNCTIONS (Load Tweets, )               ============== */
+  /**  Calculation - daysSinceTweet function    */
+    /**
+     * Takes a date in epoch time
+     * Returns the whole number of days difference between the input time and current date
+     */
+    const daysSinceTweet = function(epochOfTweet) {
+      const currentDate = new Date();
+      const currentTime = currentDate.getTime();
+      const millisecondsInDay = 86400000;
 
-/**  Function - load Tweets   */
+      const timeDifference = currentTime - epochOfTweet;
+
+      return Math.floor(dayDifference);
+    };
+
+  /**  Function - load Tweets   */
     /**
      * Makes a GET request to specified URL to access the tweet database
      * Runs returned tweet array through enderTweets function
