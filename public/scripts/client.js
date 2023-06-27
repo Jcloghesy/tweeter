@@ -9,7 +9,7 @@
     *  - Reminder: Use (and do all your DOM work in) jQuery's document ready function
     */
 
-/* =========================   EVENT HANDLER - JQUERY READY   ============== */
+/* 0.1 ======================   EVENT HANDLER - JQUERY READY   ============== */
   /*
   *  Event handler - using jQuery to ensure all html element loaded before calling
   *   - executed when the DOM is fully loaded and ready for manipulation
@@ -58,10 +58,8 @@
     ]
 
 
-  
 
-/* =========================   createTweetElement   ======================== */
-  /** createTweetElement                                                     */ 
+  /**  Function - createTweetElement                                                     */ 
    /** 
     * createTweetElement - Function to create a tweet element based on tweet data
     * @param {object} tweetData - tweet data object
@@ -89,6 +87,18 @@
       return $tweet;
     };
 
+  /**  Function - Render Tweets   */
+    /**
+     * Takes an array of tweet objects
+     * Runs each tweet object through our createTweetElement function
+     * Prepends each returned tweet element to the html section with class 'all-tweets'
+     */
+    const renderTweets = function(tweetObjArr) {
+      for (const tweet of tweetObjArr) {
+        const $tweet = createTweetElement(tweet);
+        $('section.all-tweets').prepend($tweet);
+      }
+    };
 
 /* ============================================================================================= */
 /* ============================================================================================= */
