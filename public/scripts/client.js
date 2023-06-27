@@ -119,14 +119,26 @@
 /* ==========   EVENT HANDLERS (Compose-new, submit new)      ============== */
 
   /** Event Listener to Prevent Default Behavior Submit  */
+
+  /** Event Listener to Prevent Default Behavior Submit  
    *  J/Query POST event handler that serialized form data & submits
   */
-  $('.new-tweet form').submit( function (event) {
+  $('.new-tweet form').submit(function(event) {
     event.preventDefault();
+    $('.new-tweet p').empty().slideUp();
     const $form = $(this);
-    const tweet = $form.serialize()
+    const tweet = $form.serialize();
     $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
-  });
+    .then (function(successfulPost) {
+      return $.ajax('/tweets/', { method: 'GET' })
+    })
+    .then (function(allTweetsArr) {
+      $form[0].reset();
+      $form.children('span').text(140);
+      const latestTweet = [allTweetsArr[allTweetsArr.length - 1]];
+      renderTweets(latestTweet);
+    })
+    });
   
 
   
