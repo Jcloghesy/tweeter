@@ -59,3 +59,36 @@
 
 
   
+
+/* =========================   createTweetElement   ======================== */
+  /** createTweetElement                                                     */ 
+   /** 
+    * createTweetElement - Function to create a tweet element based on tweet data
+    * @param {object} tweetData - tweet data object
+    * @returns {string} - full HTML markup/structure for the tweet element
+    *  Returns new html article - has all data, fully organized in html elements
+    */
+    const createTweetElement = function(tweetObj) {
+      const $tweet = $("<article>").addClass("tweet");
+      const daysAgo = daysSinceTweet(tweetObj["created_at"]);
+
+      const innerHTML = `
+            <header>
+                <img src= ${tweetObj.user.avatars}>
+                <span>${tweetObj.user.name}</span>
+                <span class="handle">${tweetObj.user.handle}</span>
+            </header>
+            <span>${escape(tweetObj.content.text)}</span>
+            <footer>
+              <span>${daysAgo} days ago</span>
+              <span class="interactOptions"><i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></span>
+            </footer>
+            `;
+
+      $tweet.append(innerHTML);
+      return $tweet;
+    };
+
+
+/* ============================================================================================= */
+/* ============================================================================================= */
