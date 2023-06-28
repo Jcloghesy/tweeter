@@ -50,6 +50,8 @@
 
     loadTweets();
 
+/* ==========   MAIN FUNCTIONS (Create, Render)               ============== */  
+
   /**  Function - createTweetElement                                                     */ 
    /** 
     * createTweetElement - Function to create a tweet element based on tweet data
@@ -116,7 +118,14 @@
       }, 600);
     } else {
       const tweet = $form.serialize();
-      $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
+       $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
+      .then (function (postRequestReturnValue) {
+        return $.ajax('/tweets', { method: 'GET' })
+      })
+      .then (function (getRequestReturnValue) {
+        const latestTweet = [getRequestReturnValue[getRequestReturnValue.length - 1]];
+        renderTweets(latestTweet);
+      })
       .then (function(successfulPost) {
         return $.ajax('/tweets/', { method: 'GET' })
       })
