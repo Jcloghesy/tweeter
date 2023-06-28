@@ -19,6 +19,18 @@
     };
 
 /* ==========   OTHER FUNCTIONS (Load Tweets, )               ============== */
+  
+  /** Function - Escape convert string to text node (prevent XSS) */ 
+    /**
+     * Escapes special characters in string, prevents cross-site scripting (XSS) attack
+     * @param {string} str - takes in string  to evaluate
+     * @returns {string} - outputs escaped string (escapes special characters) 
+     * Create new div element - the inner HTML of the created text node
+     */
+    const escape =  function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
   /**  Calculation - daysSinceTweet function    */
     /**
      * Takes a date in epoch time
