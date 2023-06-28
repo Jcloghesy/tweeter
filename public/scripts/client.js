@@ -15,7 +15,6 @@
   *   - executed when the DOM is fully loaded and ready for manipulation
   */
   $(document).ready(function() {
-
     //bracket to close .ready (function() { above
     };
 
@@ -31,6 +30,7 @@
       const millisecondsInDay = 86400000;
 
       const timeDifference = currentTime - epochOfTweet;
+      const dayDifference = timeDifference / millisecondsInDay;
 
       return Math.floor(dayDifference);
     };
@@ -102,17 +102,34 @@
     event.preventDefault();
     $('.new-tweet p').empty().slideUp();
     const $form = $(this);
-    const tweet = $form.serialize();
-    $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
-    .then (function(successfulPost) {
-      return $.ajax('/tweets/', { method: 'GET' })
-    })
-    .then (function(allTweetsArr) {
-      $form[0].reset();
-      $form.children('span').text(140);
-      const latestTweet = [allTweetsArr[allTweetsArr.length - 1]];
-      renderTweets(latestTweet);
-    })
+    const newTweetTextStr = $form.children('textarea').val();
+
+    if (!newTweetTextStr) {
+      $('.new-tweet p').append('<b>Error:</b> All tweets must contain at least one character. Your tweet currently does not.');
+      setTimeout(() => {
+        $('.new-tweet p').slideDown();
+      }, 600);
+    } else if (newTweetTextStr.length > 140) {
+      $('.new-tweet p').append("<b>Error:</b> We do not accept tweets longer than 140 characters. Your tweet is currently too long.");
+      setTimeout(() => {
+        $('.new-tweet p').slideDown();
+      }, 600);
+    } else {
+      const tweet = $form.serialize();
+      $.ajax({ url: "/tweets/", method: 'POST', data: tweet })
+      .then (function(successfulPost) {
+        return $.ajax('/tweets/', { method: 'GET' })
+      })
+      .then (function(allTweetsArr) {
+        $form[0].reset();
+        $form.children('span').text(140);
+        const latestTweet = [allTweetsArr[allTweetsArr.length - 1]];
+        renderTweets(latestTweet);
+      })
+      .fail(function(err) {
+        alert(err.responseJSON.error);
+      })
+    }
     });
   
 
