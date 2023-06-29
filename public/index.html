@@ -4,57 +4,67 @@
 
 <!-- =========================================================================================== -->
 <!-- ===============================  DOCTYPE & HTML =========================================== -->
-  <!DOCTYPE html>
-    <html lang="en">
-      <!-- --------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+  <html lang="en">
+    <!-- --------------------------------------------------------------------------------- -->
 <!-- ================================  HEAD ==================================================== -->
-    <head>
-      <!-- Meta Information -->
-        <title>Tweeter - Home Page</title>
+  <head>
+    <!-- Meta Information -->
+      <title>Tweeter - Home Page</title>
 
-      <!-- External CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <!-- External CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
-      <!-- Specified Fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <!-- Specified Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-      <!-- App/Layout CSS -->
-        <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- App/Layout CSS -->
+      <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-      <!-- Nav Bar CSS -->
-        <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <!-- Nav Bar CSS -->
+      <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-      <!-- Header CSS -->
-        <link rel="stylesheet" href="/styles/header.css" type="text/css" /> 
-      
-      <!-- New Tweet Form CSS -->
-        <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" /> 
-
-      <!-- All Tweets CSS -->
-        <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" /> 
-            
-      <!-- External JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-      <!-- App JS -->
-        <script type="text/javascript" src="/scripts/client.js"></script>
-
-      <!-- Icons -->
-        <script src="https://kit.fontawesome.com/d43ad7a5b6.js" crossorigin="anonymous"></script> 
+    <!-- Header CSS -->
+      <link rel="stylesheet" href="/styles/header.css" type="text/css" /> 
     
-      <!-- Character Counter JS -->
-        <script src="/scripts/composer-char-counter.js"></script> 
-              
-      <!-- Disabling Viewport Zooming -->
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-    </head>
+    <!-- New Tweet Form CSS -->
+      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" /> 
+
+    <!-- All Tweets CSS -->
+      <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" /> 
+          
+    <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Client JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Character Counter JS -->
+      <script src="/scripts/composer-char-counter.js"></script> 
+            
+    <!-- Icons -->
+      <script src="https://kit.fontawesome.com/d43ad7a5b6.js" crossorigin="anonymous"></script> 
+  
+    <!-- Disabling Viewport Zooming -->
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  </head>
 <!-- --------------------------------------------------------------------------------- -->
 <!-- ================================  BODY (PAGE CONTENT)  ==================================== -->
-    <body>
+  <body>
 <!-- --- TOP NAV BAR ('Tweeter' Logo, Dove, Down Angles)  ------------------ -->
         <nav>
           <div class="navLeft-TweeterLogo">
             <span class="wordTweeter">Tweeter</span>
+          <i class="fas fa-dove"></i>
+        </span>
+        
+        <div id="compose-new">
+          <div class="write-container">
+          <font size = "6"> <b><strong>Write</strong></b></font> a new tweet
+          <font  id="click-arrows" size = "1"></font></div>
+          <button type="button" title="click arrows to toggle open/close tweet form">
+              <i class="fas fa-angle-double-down"></i>
+          </button>
           </div>
           
           <div class="navRight-WriteTweet">
@@ -64,30 +74,31 @@
           </div>
         </nav>
 
-      <!--  USER AVATAR (Image, Name title/subtitle)                         -->
-        <header>
+    <!--  USER AVATAR (Image, Name title/subtitle)                         -->
+      <header>
+        <img src="/images/profile-hex.png"> 
+        <h2>John Cloghesy</h2>
+      </header>  
+    
 <!--  NEW TWEET FORM (Section (with h2), Form, Text Area, Button, Counter)  -->
-      <!-- Page-specific (main) content here -->   
-        <main class="container">
-        <!-- Form Container (Section, Action+Method, Tex tArea, Sub Button) -->  
-          <section class="new-tweet">
-            <p></p>
-            <form action="/tweets/" method="POST">
-            <!-- Text Area / Form Input text box   -->          
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-            <!-- Character Counter  -->
-              <span class="counter">140</span> 
-            </form>
-          </section>
-        <!-- 87 All Tweets Section  -->
-          <section class="all-tweets"></section>  
-        </main> 
-    </body>
-  </html>
-
-
+    <!-- Page-specific (main) content here -->   
+      <main class="container">
+      <!-- Form Container (Section, Action+Method, Tex tArea, Sub Button) -->  
+        <section class="new-tweet">
+          <p></p>
+          <form action="/tweets" method="POST">
+          <!-- Text Area / Form Input text box   -->          
+            <textarea name="text" placeholder="What are you humming?"></textarea>
+            <input type="submit" value="Tweet">
+          <!-- Character Counter  -->
+            <span class="counter">140</span> 
+          </form>
+        </section>
+      <!-- All Tweets Section  -->
+        <section class="all-tweets"></section>  
+      </main> 
+  </body>
+</html>
 
 <!-- ------------------------------------------------------------------------------------------- -->
-
 <!-- =========================================================================================== -->
