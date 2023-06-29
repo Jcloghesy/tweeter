@@ -6,96 +6,104 @@
 /* ============================================================================================= */
 /* ===============  Main Container All Tweets (Section.All-Tweets) ========= */
   /* All-Tweets - Main Container                           */
-  section.all-tweets {
-    width: 100%;
-  }
+section.all-tweets {
+  width: 100%;
+}
 
 /* ===============  Area for Each Tweet (Article.Tweet) ==================== */  
-/* Article.Tweet - Boarder                               */
-  article.tweet {
-    border-style: solid;
-    border-width: thick;
-    color: #545149;
-    margin-top: 50px;
-    padding: 20px;
-  }
+/* Article.Tweet (Broader)                               */
+article.tweet {
+  border-style: solid;
+  border-width: thick;
+  color: #545149;
+  margin-top: 50px;
+  padding: 20px;
+}
 
-/* Article.Tweet - Boarder - Hover                       */
-  article.tweet:hover {
-    box-shadow: 5px 5px 0 #858383;
-  }
+/* Article.Tweet (Broader) - Hover                       */
+article.tweet:hover {
+  box-shadow: 5px 5px 0 #858383;
+}
 
 /* Article.Tweet - Span                                  */
-  article.tweet span {
-    padding: 10px;
-    overflow-wrap: break-word;
-  }
+article.tweet span {
+  padding: 10px;
+  overflow-wrap: break-word;
+}
 
 
 /* ================ Header for Each Tweet (Articles.Tweet Header)  ========= */
-/* Header Area                                           */
-  article.tweet header {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-  }
+/* Header Area                       Article.Tweet Header                           */
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
 
-/* Header Area - hover                                   */
-  article.tweet:hover header {
-    font-weight: 600;
-  }
+/* Header Area - hover               Article.Tweet: Hover Header                     */
+article.tweet:hover header {
+  font-weight: 600;
+}
 
-/* Header Area Image                                     */
-  article.tweet header img {
-    height: 2em;
-  }
+/* Header Area Image                 Article.Tweet Header Img                        */
+article.tweet header img {
+  height: 2em;
+}
 
-/* Header Area Span Handle                               */
-  article.tweet header span.handle {
-    margin-left: auto;
-    color: transparent;
-  }
-/* Header Area Span Handle - hover                       */
-  article.tweet:hover header span.handle {
-    color: #C8C8C8;
-  }
+/* Header Area Span                   Article.Tweet Header Span                       */
+article.tweet header span {
+  margin-left: auto;
+  color: transparent;
+}
+/* Header Area Span Handle        Article.Tweet Header Span.Handle            */
+article.tweet header span.handle {
+margin-left: auto;
+color: transparent;
+}
+
+/* Header Area Span Handle - hover    Article.Tweet Hover Header Span.Handle      */
+article.tweet:hover header span.handle {
+  color: #C8C8C8;
+}
 
 /* =============== Footer for Each Tweet (Article.Tweet Footer)  =========== */
 /* Footer Area                                           */
-  article.tweet footer {
-    border-style: none;
-    border-top-style: solid;
-    border-width: thick;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    margin-top: 5px;
-  }
+article.tweet footer {
+  border-style: none;
+  border-top-style: solid;
+  border-width: thick;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 5px;
+}
 
 /* Footer Area - hover                                   */
-  article.tweet:hover footer {
-    font-weight: 600;
-  }
+article.tweet:hover footer {
+  font-weight: 600;
+}
 
 /* Footer Area Span                                      */
-  article.tweet footer span {
-    font-size: 15px;
-  }
-
-#icon1:hover{
-  color: #dede21;
+article.tweet footer span {
+  font-size: 15px;
 }
 
-#icon2:hover{
-  color: #dede21;
+/* Footer Area Span InteractOptions                      */
+article.tweet footer span.interactOptions {
+  font-size: 12px;
 }
 
-#icon3:hover{
-  color: #dede21;
+/* Footer Area Span InteractOptions i (padding)          */
+article.tweet footer span.interactOptions i {
+  padding: 5px;
+  color: transparent;
 }
 
-/* =============================   Other    ================================= */
+/* Footer Area Span InteractOptions i (hover)            */
+article.tweet:hover footer span.interactOptions i {
+  color: #4056A1;
+}
 
 
 /* ============================================================================================ */
