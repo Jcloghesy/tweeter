@@ -13,21 +13,26 @@
  *   ANALYSIS - counts inputted chars & compares to max to determine available 
  *	 RESPONDS - updates the displayed counter showing char still available 
  *          - determines styling of counter by applying class based upon inputted
- *            values vs. max allowed (turns red if inputted too mnny characters)
+ *            values vs. max allowed (turns red if inputted too many characters)
  */
 $(document).ready(function () {
+  
   $('.new-tweet textarea').on('input', function() {
+    $('.new-tweet p').empty().slideUp();
     let newTweetLength = $(this).val().length;
     let nearbyCounter = $(this).siblings('.counter');
     const tweetLengthLimit = 140;
-
+console.log(newTweetLength, tweetLengthLimit)
     if (newTweetLength > tweetLengthLimit) {
-      nearbyCounter.addClass('tweetTooLong');
+      nearbyCounter.css({color:'red'})
+      //nearbyCounter.addClass('tweetTooLong');
     } else if (newTweetLength <= tweetLengthLimit) {
-      nearbyCounter.removeClass('tweetTooLong');
+      nearbyCounter.css({color:'black'})
+      //nearbyCounter.removeClass('tweetTooLong');
     }
     nearbyCounter.text(tweetLengthLimit - newTweetLength);
   });
+
 });
 
 
