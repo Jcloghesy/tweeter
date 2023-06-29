@@ -1,41 +1,53 @@
 /* ============================================================================================= */
 /* ==-----------------------------  LAYOUT.CSS   ---------------------------------------------== */
 /* ============================================================================================= */
-
+  /* ---  Misc. Comments  ---- * / 
+ *  Do not modify these two selectors, please
+ *    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ *    https://css-tricks.com/international-box-sizing-awareness-day/
+ */
 
 /* ============================================================================================= */
-/* ---  Misc. Comments  ---- * / 
-   http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-   https://css-tricks.com/international-box-sizing-awareness-day/
-   Do not modify these two selectors, please
-  */
-
 /* -----------------------------------  HTML   ------------------------------------------------- */
-  html {
-    box-sizing: border-box;
+/* HTML box-sizing of boarder                                             */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* ----------------------------------   BODY   ------------------------------------------------- */
+/* Global layout - container for new tweet form and all tweets            */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ----------------------------------   MAIN   ------------------------------------------------- */
+/* Additional CSS (designated in template, other CSS files mentioned      */
+/* Main Action                                                            */
+main {
+  background-color: #f4f1ec;
+  height: 100%;
+  width: 90%;
+  margin: 0px 50px 50px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Min-Width - @media (min-width)                                         */
+@media (min-width: 850px) {
+  main{
+    margin: 120px 50px 50px 50px;
+    width: 50vw;
+    float: right;
   }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  };
+}
 
 
-/* ----------------------------------  BODY   ------------------------------------------------- */
-  /* Global layout stuff - container for new tweet form and all tweets */
-
- 
-
-/* ----------------------------------    MAIN   ---------------------------------------------- */
-  /* ----  Additional CSS can be defined below or in other CSS files, as per instructions ------ */
-
-  main {
-    background-color: inherit;  /* alt color #f4f1ec*/
-    height: 100%;
-    width: 90%;
-    margin: 0px 50px 50px 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
 /* ============================================================================================= */
-
+/* ============================================================================================= */
