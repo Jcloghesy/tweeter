@@ -14,8 +14,6 @@ supplied by [lighthouse labs][Lighthouse Labs - GitHub]
 # TABLE OF CONTENT
 
 - [USAGE](#usage)
-  - [DEPENDENCIES](#dependencies)
-  - [INSTALLATION](#INSTALLATION:-REPOSITORY-&-DEPENDENCIES)
 - [FEATURES](#features)
 - [FILE STRUCTURE](#file-structure)
 - [CREDIT](#credit)
