@@ -1,51 +1,89 @@
-/* -------------------------  Entire Navigation Bar      --------------------------------------- */
-/* Entire Nav Bar Area */
-  nav {
-    background-color: #4056A1;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    width: 100%;
-    top: 0;
-    left: 0;
-  position: fixed;
-    right: 0;
-    z-index: 3;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    position: fixed; /*fixes nav bar*/
-  }
+/* ============================================================================================= */
+/* ==----------------------------------  NAV.CSS  --------------------------------------------== */
+/* ============================================================================================= */
 
-/* left Area around 'Tweeter' logo */
-  div.navLeft-TweeterLogo {
-    display: flex;
-    text-align: end;
-    flex-wrap: wrap;
-    font-size: 2.0rem;
-    font-family: 'Bungee', sans-serif;
-    justify-content: center;
-    flex-direction: column;
-}
 
-/* Right Area around 'Write a new tweet' */
-  div.navRight-WriteTweet {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+/* =============================================================================================  */
+/* ===============================  Navigation Bar  ============================================  */
+/*                            -------------------------                                          */
 
-.nav {
+/* --------------------------  Areas of Navigation Bar     ------------------------------------- */
+/* Nav - Entire Nav Bar Area                                                       */
+nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
   display: flex;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed; /*fixes nav bar*/
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3; 
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
-/* -------------------------    Tweeter Logo         ------------------------------------------- */
-/* 'Tweeter' logo */
-#logoTweeter {
+/* --------------------------   Elements within Nav Bar   -------------------------------------- */
+/* Nav left - Tweeter logo */
+#logo {
   color: #FFFFFF;
   margin: 1.5em;
   font-family: 'Bungee', sans-serif;
+}
+
+/*  Compose New                */
+#compose-new {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.write-container {
+  margin-top: 0.75em
+
+}
+#click-arrows {
+  alignment:
+}
+
+/*  Button        */
+button {
+  color: red;
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+
+/*  Bounce @Keyframes        */
+@keyframes bounce {
+  from {
+    padding: 0px;
+  }
+  to {
+    padding: 10px;
+  }
+}
+
+/*  Max-Width (@Media - nav)  */
+@media (max-width: 850px) {
+  nav {
+    background-color: #4056A1;
+    background-image: url(../images/arches.png);
+  }
+}
+
+/*  Min-Width (@Media - nav span)     */
+@media (min-width: 851px) {
+  nav span i{
+    color: #4056A1;
+  }
 }
