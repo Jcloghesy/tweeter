@@ -6,25 +6,25 @@
 /* ============================================================================================= */
 /* ========================  Main Styling Elements  ======================== */
 
-/* 1. styles for the whole new tweet sections */
+/*  Section.new-tweet:       styles for the whole new tweet sections */
 section.new-tweet {
   width: 100%;
   margin-top: 50px;
   display: none;
 }
 
-/* 2. container that holds the form */
-.new-tweet p {
+/*  .new-tweet p:            (dis:none) container that holds the form */
+.error-message-box {
   padding: 15px;
   background-color: #F36060;
   color: #FFFFFF;
   border-radius: 25px;
-  display: none;
+  display: none
   text-align: center;
   margin-top: 0px;
 }
 
-/* 3. tweet text input area */        
+/*  Textarea:                tweet text input area */        
 textarea {
   background-color:  #f4f1ec;
   width: 100%;
@@ -36,12 +36,17 @@ textarea {
   color: #545149;
 }
 
+/*  Textarea::placeholder     text for what are you humming about*/
+textarea::placeholder {
+  color: #545149;
+  opacity: 1;
+}
 
 
 /* ============================================================================================= */
 /* ========================  Other Page Elements  ========================== */
 
-/* Tweet Button */
+/* Tweet Button                                                              */
 input {
   background-color: #4056A1;
   font-family: 'Bungee', sans-serif;
@@ -49,18 +54,21 @@ input {
   margin-top: 10px;
 }
 
-/* Character Counter */
+/* Character Counter                                                         */
+/* Span.counter                                                              */
 span.counter {
   font-family: 'Bungee', sans-serif;
   color: white;
   border-top: 10px;
   float: right;
-}
+};
 
-span.counter.tweetTooLong {
+/* Span.counter.tweetToolong */
+.tweetTooLong {
   color:red;
 }
 
 
 /* ============================================================================================= */
 /* ============================================================================================= */
+DSAFL;JFALKDFJ;LADSJF;LASKDJF;AJDF;LASJD;FJASDDKJFHA;LDFH;ASDLKJF;ADFHA;LKDFJALK;DFJ;AODSLJFDSLK;FJAS;DLJFA;DSJFIOWEJHPRAEIHOADLSKFJA;SDLKFJOIWFHAOIHF
