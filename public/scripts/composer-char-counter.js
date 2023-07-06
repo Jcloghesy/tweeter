@@ -22,7 +22,6 @@ $(document).ready(function () {
     let newTweetLength = $(this).val().trim().length;
     let nearbyCounter = $(this).siblings('.counter');
     const tweetLengthLimit = 140;
-console.log(newTweetLength, tweetLengthLimit)
     if (newTweetLength > tweetLengthLimit) {
       nearbyCounter.css({color:'red'})
       //nearbyCounter.addClass('tweetTooLong');
