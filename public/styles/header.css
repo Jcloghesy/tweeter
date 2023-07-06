@@ -21,17 +21,17 @@ body > header {
   padding: 10px;
 }
 
-/* User - Avatar / Image */
+/* User - Avatar / Image                                      */
 body > header img {
   margin: 5px;
 }
 
-/* User - Name / Handle */
+/* User - Name / Handle                                       */
 body > header h2 {
   margin: 5px;
 }
 
-/* Area for User - holds avatar/image & name/handle */
+/* Area for User - holds avatar/image & name/handle           */
 @media (min-width: 850px) {
   body > header {
     width: 30vw;

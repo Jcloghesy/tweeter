@@ -62,8 +62,14 @@ button {
   animation-iteration-count: infinite;
 }
 
+.username {
+  color: #FFFFFF;
+}
 
-/*  Bounce @Keyframes        */
+.firstname {
+  font-weight: 900;
+}
+
 @keyframes bounce {
   from {
     padding: 0px;

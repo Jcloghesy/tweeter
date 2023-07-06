@@ -25,12 +25,16 @@ article.tweet:hover {
   box-shadow: 5px 5px 0 #858383;
 }
 
-/* Article.Tweet - Span                                  */
-article.tweet span {
+/* Article.Tweet - Span   */
+/*article.tweet span {
   padding: 10px;
   overflow-wrap: break-word;
-}
+}*/
 
+div.tweet-text {
+  padding: 10px;
+  font-weight: 400;
+}
 
 /* ================ Header for Each Tweet (Articles.Tweet Header)  ========= */
 /* Header Area                       Article.Tweet Header                           */
@@ -38,7 +42,7 @@ article.tweet header {
   display: flex;
   flex-direction: row;
   margin-bottom: 15px;
-}
+  font-size: 0.8em;
 
 }
 
