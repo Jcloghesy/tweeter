@@ -50,24 +50,21 @@ article.tweet header img {
   height: 2em;
 }
 
-/* Header Area Span                   Article.Tweet Header Span                       */
+/* Header Area Span (e.g. Newton / Descartes) Article.Tweet Header Span      */
 article.tweet header span {
-  margin-left: auto;
-  color: transparent;
+  margin-left: inherit;
+  color: #545149;
 }
-/* Header Area Span Handle        Article.Tweet Header Span.Handle            */
+
+/* Header Area Span Handle                  Article.Tweet Header Span.Handle */
 article.tweet header span.handle {
 margin-left: auto;
-color: transparent;
+color: #C8D1E5;
 }
 
-/* Header Area Span Handle - hover    Article.Tweet Hover Header Span.Handle      */
-article.tweet:hover header span.handle {
-  color: #C8C8C8;
-}
 
-/* =============== Footer for Each Tweet (Article.Tweet Footer)  =========== */
-/* Footer Area                                           */
+/* =============== Footer for Each Tweet   Article.Tweet Footer  =========== */
+/* Footer Area  */
 article.tweet footer {
   border-style: none;
   border-top-style: solid;
@@ -79,31 +76,32 @@ article.tweet footer {
   margin-top: 5px;
 }
 
-/* Footer Area - hover                                   */
-article.tweet:hover footer {
-  font-weight: 600;
-}
 
-/* Footer Area Span                                      */
+/* Footer Area Span                                                          */
 article.tweet footer span {
   font-size: 15px;
 }
 
-/* Footer Area Span InteractOptions                      */
+/* Footer Area Span InteractOptions                                          */
 article.tweet footer span.interactOptions {
-  font-size: 12px;
+  font-size: 15px;
 }
 
-/* Footer Area Span InteractOptions i (padding)          */
+/* Footer Area Span InteractOptions i (padding)                              */
 article.tweet footer span.interactOptions i {
   padding: 5px;
-  color: transparent;
-}
-
-/* Footer Area Span InteractOptions i (hover)            */
-article.tweet:hover footer span.interactOptions i {
   color: #4056A1;
 }
+
+
+article.tweet footer span.interactOptions i:hover {
+  color: #cf933a; 
+  }
+
+/* ============================================================================================ */
+  article.tweet:hover footer span.interactOptions i {
+    color: #4056A1;
+  }
 
 
 /* ============================================================================================ */
