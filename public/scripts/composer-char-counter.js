@@ -6,13 +6,12 @@
 /**
  * Implements character counter function (listener, handler, still available) 
  *   DOCUMENT READY - starts by ensuring HTML elements are loaded in browser
- *        - loading occurs prior to any attempts to access elements  
- *   EVENT LISTENER - Establishes event listener for text input  
- *        - listener focused on textarea  (.new-tweet section of Tweet form)
- *        - obtains the textarea values 
+ *     - HTML loading occurs prior to any attempts to access elements  
+ *   EVENT LISTENER - establishes listener for text input focused on typing
+ *      in textarea (.new-tweet section of Tweet form), obtains textarea values 
  *   ANALYSIS - counts inputted chars & compares to max to determine available 
  *	 RESPONDS - updates the displayed counter showing char still available 
- *          - determines styling of counter by applying class based upon inputted
+ *            - determines counter styling by applying/removing class based on
  *            values vs. max allowed (turns red if inputted too many characters)
  */
 $(document).ready(function () {
@@ -34,7 +33,7 @@ $(document).ready(function () {
 
 });
 
-
+let newTweetLengthUn = $(this).val().length;
 
 
 

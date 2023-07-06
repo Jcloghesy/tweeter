@@ -5,13 +5,13 @@
 
 /* ============================================================================================= */
 /* ===============  Main Container All Tweets (Section.All-Tweets) ========= */
-  /* All-Tweets - Main Container                           */
+  /* All-Tweets - Main Container                                             */
 section.all-tweets {
   width: 100%;
 }
 
 /* ===============  Area for Each Tweet (Article.Tweet) ==================== */  
-/* Article.Tweet (Broader)                               */
+/* Article.Tweet (Boarder)                                                   */
 article.tweet {
   border-style: solid;
   border-width: thick;
@@ -20,7 +20,7 @@ article.tweet {
   padding: 20px;
 }
 
-/* Article.Tweet (Broader) - Hover                       */
+/* Article.Tweet (Boarder) - Hover                                           */
 article.tweet:hover {
   box-shadow: 5px 5px 0 #858383;
 }
@@ -37,7 +37,7 @@ div.tweet-text {
 }
 
 /* ================ Header for Each Tweet (Articles.Tweet Header)  ========= */
-/* Header Area                       Article.Tweet Header                           */
+/* Header Area                                Article.Tweet Header           */
 article.tweet header {
   display: flex;
   flex-direction: row;
@@ -46,7 +46,7 @@ article.tweet header {
 
 }
 
-/* Header Area Image                 Article.Tweet Header Img                        */
+/* Header Area Image (e.g. user avatar)       Article.Tweet Header Img       */
 article.tweet header img {
   height: 2em;
 }
@@ -99,6 +99,5 @@ article.tweet footer span.interactOptions i:hover {
   color: #cf933a; 
   }
 
-/* ============================================================================================ */
 /* ============================================================================================ */
 /* ============================================================================================ */

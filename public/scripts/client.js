@@ -10,15 +10,15 @@
   */
 
 /* ======================   EVENT HANDLER - JQUERY READY   ============== */
-/*
-*  Event handler - using jQuery to ensure all html element loaded before calling
-*   - executed when the DOM is fully loaded and ready for manipulation
-*/
+/**
+ *  Event handler - using jQuery to ensure all html element loaded before calling
+ *   - executed when the DOM is fully loaded and ready for manipulation
+ */
 $(document).ready(function() {
   //bracket to close .ready (function() { above   
 
 /* ==========   OTHER FUNCTIONS (Escape, Load Tweets, )               ============== */
-/**  Escape Function: convert string to text node (prevent XSS) */ 
+/*  Escape Function: convert string to text node (prevent XSS) */ 
   /**
    * Escapes special characters in string, prevents cross-site scripting (XSS) attack
    * @param {string} str - takes in string  to evaluate
@@ -67,10 +67,10 @@ $(document).ready(function() {
               <span>${tweetObj.user.name}</span>
               <span class="handle">${tweetObj.user.handle}</span>
           </header>
-          <span>${escape(tweetObj.content.text)}</span>
+          <div class="tweet-text">${escape(tweetObj.content.text)}</div>
           <footer>
             <span>${daysAgo} days ago</span>
-            <span class="interactOptions"><i class="fab fa-font-awesome-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></span>
+            <span class="interactOptions"><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></span>
           </footer>
           `;
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
   /**
    * Makes a GET request to specified URL to access the tweet database
    * Runs returned tweet array through enderTweets function
-   * After tweet loaded, processed, renders the tweets on success.
+   * After tweet loaded, processed, renders the tweets on success                                                                            
    */
   const loadTweets = function() {
     $.ajax('/tweets/', { method: 'GET' })
@@ -111,13 +111,12 @@ $(document).ready(function() {
   loadTweets();
 /**  New Tweet Form Submission (remove/slide-up error mess)               */
   /**
-   * Triggered - Form Submission Triggered on submission of the form with the class 'new-tweet'
-   * Existing Messages - emplie & slides up Empties and slides up any existing error messages
+   * Trigger - form submission triggered on submission of the form with the class 'new-tweet'
+   * Existing Messages - empties & slides up any existing error messages
    * Checks the length of the text being submitted and runs error messages if necessary
-   * POST text -> /tweets/ - If no errors from text length, makes POST request with form text to /tweets/
-   * GET /text/  - then makes a GET request to /tweets/
-   *     Reset , Render to add new 
-   * - Then resets the form and uses our renderTweets function to add the new tweet to the page 
+   * POST text -> /tweets/ - if no errors from text length, makes POST request with form text to /tweets/
+   * GET text  -> then makes a GET request to /tweets/
+   * Reset , Render to add new - resets the form, prepends new tweet 
    */
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
