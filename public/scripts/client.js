@@ -119,7 +119,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('.new-tweet p').empty().slideUp();
     const $form = $(this);
-    const newTweetTextStr = $form.children('textarea').val();
+    const newTweetTextStr = $form.children('textarea').val().trim();
 
     if (!newTweetTextStr) {
       $('.new-tweet p').addClass('error-message-box')
