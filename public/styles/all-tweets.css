@@ -40,9 +40,6 @@ article.tweet header {
   margin-bottom: 15px;
 }
 
-/* Header Area - hover               Article.Tweet: Hover Header                     */
-article.tweet:hover header {
-  font-weight: 600;
 }
 
 /* Header Area Image                 Article.Tweet Header Img                        */
@@ -99,10 +96,5 @@ article.tweet footer span.interactOptions i:hover {
   }
 
 /* ============================================================================================ */
-  article.tweet:hover footer span.interactOptions i {
-    color: #4056A1;
-  }
-
-
 /* ============================================================================================ */
 /* ============================================================================================ */
