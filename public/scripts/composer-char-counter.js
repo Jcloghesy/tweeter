@@ -19,7 +19,7 @@ $(document).ready(function () {
   
   $('.new-tweet textarea').on('input', function() {
     $('.new-tweet p').empty().slideUp();
-    let newTweetLength = $(this).val().length;
+    let newTweetLength = $(this).val().trim().length;
     let nearbyCounter = $(this).siblings('.counter');
     const tweetLengthLimit = 140;
 console.log(newTweetLength, tweetLengthLimit)
