@@ -101,8 +101,12 @@ $(document).ready(function() {
     $.ajax('/tweets/', { method: 'GET' })
       .then(function(allTweets) {
         renderTweets(allTweets);
-      });
-  };
+
+      })
+      .catch(function(error) {
+        alert(error);
+      })      
+    };
 
   loadTweets();
 /**  New Tweet Form Submission (remove/slide-up error mess)               */
